@@ -1,4 +1,4 @@
-# Euler-Method-Python
+# Eulers-Method-Python
 
 Euler's Method approximation in Python.
 
