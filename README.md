@@ -3,6 +3,7 @@
 Euler's Method approximation in Python.
 
 ## Usage
+
 Define your own class with an ``evaluate`` method, which accepts x and y as arguments and returns a value.
 
 Example:
@@ -12,7 +13,16 @@ class Derivative:
         return x - 2 * y * math.sin(x)
 ```
 
-Graph and chart:
+Import the library, then call the `evaluate` method to generate a table of data.
+
+Parameters:
+* Derivative class
+* Starting X
+* Starting Y
+* Ending X
+* Step size (Optional, default 0.5)
+
+Example:
 ```python
 import euler
 calc = euler.EulerCalculator()
