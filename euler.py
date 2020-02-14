@@ -38,7 +38,7 @@ class EulerCalculator:
         derivativeFunction = self.__getFunction(derivative)
         currentValue = startY
         data = []
-        while abs(startX - endX) >= pow(10, -4):
+        while abs(startX - endX - stepSize) >= pow(10, -4):
             data.append(
                 [startX, currentValue,]
             )
