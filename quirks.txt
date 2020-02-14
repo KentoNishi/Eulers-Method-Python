@@ -23,4 +23,9 @@ yx, y*x
 x(, x*(
 y(, y*(
 ^, **
-
+cos, math.cos
+sin, math.sin
+tan, math.tan
+cot, math.cot
+sec, math.sec
+csc, math.csc
