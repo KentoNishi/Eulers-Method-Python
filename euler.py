@@ -14,8 +14,7 @@ class EulerCalculator:
             for quirk in quirks[:-1]:
                 original, final = tuple(quirk.split(", "))
                 final = final[:-1]
-                self.__quirkDict["original"] = final
-                inputString = inputString.replace(original, final)
+                self.__quirkDict[original] = final
         for quirk in self.__quirkDict.keys():
             inputString = inputString.replace(quirk, self.__quirkDict[quirk])
         return inputString
