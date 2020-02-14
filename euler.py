@@ -34,6 +34,8 @@ class EulerCalculator:
         startY = args["startY"]
         endX = args["endX"]
         stepSize = args["stepSize"]
+        if stepSize <= 0:
+            raise ValueError("Step size cannot be less than or equal to 0")
         derivativeFunction = self.__getFunction(derivative)
         currentValue = startY
         data = []
