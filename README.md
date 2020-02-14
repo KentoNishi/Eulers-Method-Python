@@ -5,7 +5,10 @@ Euler's Method approximation in Python.
 ## Usage
 
 Import the library, then call the `evaluate` method to generate a table of data.
-Then, call the `graph` method to graph the equation.
+
+Call the `print` method to print out the points to the console.
+
+Call the `graph` method to graph the equation.
 
 Parameters:
 * Derivative expression
@@ -19,8 +22,9 @@ Example:
 import euler
 calc = euler.EulerCalculator()
 points = calc.evaluate(
-    derivative="x-2*y*sin(x)", startX=0, startY=20, endX=2, stepSize=0.1
+    derivative="x-2ysin(x)", startX=0, startY=20, endX=2, stepSize=0.1
 )
+calc.print(points)
 calc.graph(points)
 ```
 

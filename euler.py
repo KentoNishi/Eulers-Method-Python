@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from tabulate import tabulate
-import math
+from math import *
 
 
 class EulerCalculator:
@@ -34,12 +34,12 @@ class EulerCalculator:
         startY = args["startY"]
         endX = args["endX"]
         stepSize = args["stepSize"]
-        if stepSize <= 0:
-            raise ValueError("Step size cannot be less than or equal to 0")
+        if abs(stepSize) < pow(10, -4):
+            raise ValueError("Step size is too small")
         derivativeFunction = self.__getFunction(derivative)
         currentValue = startY
         data = []
-        while startX <= endX:
+        while abs(startX - endX) >= pow(10, -4):
             data.append(
                 [startX, currentValue,]
             )
@@ -47,8 +47,10 @@ class EulerCalculator:
             currentValue += stepSize * derivativeFunction(startX, currentValue)
         return data
 
+    def print(self, data):
+        print(tabulate(data, headers=["x", "y"]))
+
     def graph(self, data):
         x, y = np.array(data).T
         plt.plot(x, y, "-o")
-        print(tabulate(data, headers=["x", "y"]))
         plt.show()
