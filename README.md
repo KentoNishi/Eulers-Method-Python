@@ -4,10 +4,8 @@ Euler's Method approximation in Python.
 
 ## Usage
 
-Define your own class with an ``evaluate`` method, which accepts x and y as arguments and returns a value.
-
-Example:
 Import the library, then call the `evaluate` method to generate a table of data.
+Then, call the `graph` method to graph the equation.
 
 Parameters:
 * Derivative expression
