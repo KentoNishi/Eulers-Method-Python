@@ -7,26 +7,22 @@ Euler's Method approximation in Python.
 Define your own class with an ``evaluate`` method, which accepts x and y as arguments and returns a value.
 
 Example:
-```python
-class Derivative:
-    def evaluate(self, x, y):
-        return x - 2 * y * math.sin(x)
-```
-
 Import the library, then call the `evaluate` method to generate a table of data.
 
 Parameters:
-* Derivative class
+* Derivative expression
 * Starting X
 * Starting Y
 * Ending X
-* Step size (Optional, default 0.5)
+* Step size
 
 Example:
 ```python
 import euler
 calc = euler.EulerCalculator()
-points = calc.evaluate(Derivative(), 0, 20, 2, stepSize=0.1)
+points = calc.evaluate(
+    derivative="x-2*y*sin(x)", startX=0, startY=20, endX=2, stepSize=0.1
+)
 calc.graph(points)
 ```
 
