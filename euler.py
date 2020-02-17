@@ -42,8 +42,8 @@ class EulerCalculator:
             data.append(
                 [startX, currentValue,]
             )
-            startX += stepSize
             currentValue += stepSize * derivativeFunction(startX, currentValue)
+            startX += stepSize
         return data
 
     def print(self, data):
