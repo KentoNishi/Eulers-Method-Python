@@ -29,7 +29,9 @@ calc.graph(points)
 ```
 
 Output:
+
 ![Screenshot](./images/screenshot.png)
+
 ```
   x         y
 ---  --------
